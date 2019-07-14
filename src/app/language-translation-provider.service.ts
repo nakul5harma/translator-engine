@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from './../environments/environment';
 
 import { Subject } from 'rxjs';
 
@@ -20,7 +21,7 @@ export class LanguageTranslationProviderService {
         { language: 'Polish', languageCode: 'pl' },
         { language: 'German', languageCode: 'de' }
     ];
-    private csvFilePath = `assets/AIESEC.org translations - Production For AI.csv`;
+    private csvFilePath = environment.assetsUrl + `AIESECorgTranslationsProductionForAI.csv`;
 
     constructor(private http: HttpClient) {
         this.csvReader();

@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    assetsUrl: 'assets/'
+    assetsUrl: 'translator-engine/assets/'
 };
