@@ -26,7 +26,12 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.languageOptions = this.languageTranslationProviderService.getLanguageOptions();
         this.selectedLanguage = new FormControl('en');
-        this.getBrowserLanguage();
+
+        this.languageTranslationProviderService.recordsLoaded.subscribe((loaded) => {
+            if (loaded) {
+                this.getBrowserLanguage();
+            }
+        });
     }
 
     private getBrowserLanguage() {

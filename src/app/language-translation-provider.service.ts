@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { Subject } from 'rxjs';
+
 import { LanguageMapCSVModel } from './language-map-csv.model';
 
 @Injectable({
@@ -8,6 +10,7 @@ import { LanguageMapCSVModel } from './language-map-csv.model';
 })
 export class LanguageTranslationProviderService {
     private records: Array<LanguageMapCSVModel> = [];
+    public recordsLoaded: Subject<boolean> = new Subject<boolean>();
     private languageOptions: Array<{ language: string; languageCode: string }> = [
         { language: 'English', languageCode: 'en' },
         { language: 'Spanish', languageCode: 'es' },
@@ -35,6 +38,7 @@ export class LanguageTranslationProviderService {
 
                 const headersRow = this.getHeaderArray(csvRecordsArray);
                 this.records = this.getDataRecordsArrayFromCSVFile(csvRecordsArray, headersRow.length);
+                this.recordsLoaded.next(true);
             },
             (error) => {
                 console.log('error is occured while reading file - ', error);
