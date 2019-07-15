@@ -1,11 +1,11 @@
-export class LanguageMapCSVModel {
+export class LanguageMapModel {
     constructor(
         public englishText: string,
         public spanishText: string,
         public portugueseText: string,
         public frenchText: string,
         public mandarinText: string,
-        public polishText: string,
+        // public polishText: string,
         public germanText: string
     ) {}
 }

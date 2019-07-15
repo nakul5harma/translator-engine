@@ -4,12 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LanguagePipe } from './language.pipe';
+import { TranslatePipe } from './translations/translate.pipe';
 
 @NgModule({
     declarations: [
         AppComponent,
-        LanguagePipe
+        TranslatePipe
     ],
     imports: [
         BrowserModule,

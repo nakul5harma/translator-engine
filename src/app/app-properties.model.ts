@@ -1,9 +1,9 @@
 export class AppProperties {
-    public readonly globalVolunteerAltText = 'Global Volunteer Logo';
+    public readonly globalVolunteerAltText = `Global Volunteer Logo`;
     public readonly staticHeadText = `If we don't change the world, then who will?`;
     public readonly headContentText = `Global Volunteer is a cross-cultural experience for youth who want to gain personal development and leave an impact on the world.`;
 
-    public readonly benefitAltText = 'Benefits of Global Volunteer';
+    public readonly benefitAltText = `Benefits of Global Volunteer`;
     public readonly infoContentExperienceAltText = `Experience new cultures`;
     public readonly infoContentExperience = `Experience new cultures`;
     public readonly infoContentExperienceContent = `There's nothing quite like being in a brand new country, living and volunteering with people from all around. Imagine the things you'd learn!`;
@@ -70,36 +70,36 @@ export class AppProperties {
 
     public readonly aboutHeadText = `About`;
     public readonly aboutAnchorTexts = [
-        'About Us',
-        'Help',
-        'Blog',
-        'Press',
-        'Annual Report'
+        `About Us`,
+        `Help`,
+        `Blog`,
+        `Press`,
+        `Annual Report`
     ];
 
     public readonly youthHeadText = `Youth`;
     public readonly youthAnchorTexts = [
-        'Global Volunteer',
-        'Global Talent',
-        'Global Entrepreneur',
-        'Youth 4 Global Goals',
-        'YouthSpeak'
+        `Global Volunteer`,
+        `Global Talent`,
+        `Global Entrepreneur`,
+        `Youth 4 Global Goals`,
+        `YouthSpeak`
     ];
 
     public readonly organizationHeadText = `Organization`;
     public readonly organizationAnchorTexts = [
-        'Partner with us',
-        'Global Volunteer',
-        'Global Talent',
-        'Global Entrepreneur',
-        'Premium Organization'
+        `Partner with us`,
+        `Global Volunteer`,
+        `Global Talent`,
+        `Global Entrepreneur`,
+        `Premium Organization`
     ];
 
     public readonly membershipHeadText = `Membership`;
     public readonly membershipAnchorTexts = [
-        'Join Us',
-        'Find your country!',
-        'Alumni'
+        `Join Us`,
+        `Find your country!`,
+        `Alumni`
     ];
 
     public readonly registeredName = `© AIESEC 2018`;

@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from './../environments/environment';
+import { environment } from '../../environments/environment';
 
 import { Subject } from 'rxjs';
 
-import { LanguageMapCSVModel } from './language-map-csv.model';
+import { LanguageMapModel } from './language-map.model';
 
 @Injectable({
     providedIn: 'root'
 })
-export class LanguageTranslationProviderService {
-    private records: Array<LanguageMapCSVModel> = [];
+export class TranslationService {
+    private currentLanguage: string;
+    private records: Array<LanguageMapModel> = [];
     public recordsLoaded: Subject<boolean> = new Subject<boolean>();
     private languageOptions: Array<{ language: string; languageCode: string }> = [
         { language: 'English', languageCode: 'en' },
@@ -18,13 +19,21 @@ export class LanguageTranslationProviderService {
         { language: 'Portuguese', languageCode: 'pt' },
         { language: 'French', languageCode: 'fr' },
         { language: 'Mandarin(Simplified)', languageCode: 'zh' },
-        { language: 'Polish', languageCode: 'pl' },
+        // { language: 'Polish', languageCode: 'pl' },
         { language: 'German', languageCode: 'de' }
     ];
     private csvFilePath = environment.assetsUrl + `AIESECorgTranslationsProductionForAI.csv`;
 
     constructor(private http: HttpClient) {
         this.csvReader();
+    }
+
+    public getCurrentLanguage() {
+        return this.currentLanguage;
+    }
+
+    public useLanguage(language: string) {
+        this.currentLanguage = language;
     }
 
     public getLanguageOptions() {
@@ -56,13 +65,13 @@ export class LanguageTranslationProviderService {
                 .replace(new RegExp(', ', 'g'), '__');
             const curruntRecord = (csvRecordsArray[i] as string).split(',');
             if (curruntRecord.length === headerLength) {
-                const languageCSVModel: LanguageMapCSVModel = new LanguageMapCSVModel(
+                const languageCSVModel: LanguageMapModel = new LanguageMapModel(
                     curruntRecord[0].trim().replace(new RegExp('__', 'g'), ', '),
                     curruntRecord[1].trim().replace(new RegExp('__', 'g'), ', '),
                     curruntRecord[2].trim().replace(new RegExp('__', 'g'), ', '),
                     curruntRecord[3].trim().replace(new RegExp('__', 'g'), ', '),
                     curruntRecord[4].trim().replace(new RegExp('__', 'g'), ', '),
-                    curruntRecord[5].trim().replace(new RegExp('__', 'g'), ', '),
+                    // curruntRecord[5].trim().replace(new RegExp('__', 'g'), ', '),
                     curruntRecord[6].trim().replace(new RegExp('__', 'g'), ', ')
                 );
                 csvArr.push(languageCSVModel);
@@ -80,14 +89,18 @@ export class LanguageTranslationProviderService {
         return headerArray;
     }
 
-    public translateText(text: string, targetLanguage: string): string {
-        if (targetLanguage === 'en') {
-            return text;
+    public translateText(text: string, targetLanguage?: string): string {
+        let toLanguage: string;
+
+        if (targetLanguage) {
+            toLanguage = targetLanguage;
+        } else {
+            toLanguage = this.getCurrentLanguage();
         }
 
-        const toLanguage: string = this.languageOptions
+        toLanguage = this.languageOptions
             .find((language: { language: string; languageCode: string }) => {
-                return language.languageCode === targetLanguage;
+                return language.languageCode === toLanguage;
             })
             .language.split('(')[0]
             .toLowerCase()
@@ -97,7 +110,7 @@ export class LanguageTranslationProviderService {
     }
 
     private findAndTranslate(text: string, toLanguage: string): string {
-        const matchedRecord = this.records.find((record: LanguageMapCSVModel) => {
+        const matchedRecord = this.records.find((record: LanguageMapModel) => {
             return record.englishText.toLowerCase().trim() === text.toLowerCase().trim();
         });
 
@@ -105,5 +118,18 @@ export class LanguageTranslationProviderService {
             return matchedRecord[toLanguage];
         }
         return text;
+    }
+
+    public getBrowserLanguage() {
+        let browserLanguage = navigator.language.slice(0, 2) || 'en';
+        if (
+            !this.getLanguageOptions().find((language) => {
+                return language.languageCode === browserLanguage;
+            })
+        ) {
+            browserLanguage = 'en';
+        }
+
+        return browserLanguage;
     }
 }

@@ -2,55 +2,55 @@
     <div class="banner-overlay global">
         <div class="global-logo">
             <img class="logo" src="https://cdn-expa.aiesec.org/assets/images/brand_icons/GV.png"
-                [alt]="appProperties.globalVolunteerAltText | language : selectedLanguage.value" />
+                [alt]="appProperties.globalVolunteerAltText | translate" />
         </div>
     </div>
 </div>
 <div class="global-body gv-body">
     <div class="static-head-text text-center offwhite-bg">
-        {{appProperties.staticHeadText | language : selectedLanguage.value }}
-        <div class="content-text">{{appProperties.headContentText | language : selectedLanguage.value }}</div>
+        {{appProperties.staticHeadText | translate }}
+        <div class="content-text">{{appProperties.headContentText | translate }}</div>
     </div>
     <div class="main-info flex-container">
         <div class="section-image-left">
             <img class="img-responsive"
                 src="https://cdn-expa.aiesec.org/assets/images/aiesec_org/static_images/gv_benefits_2x.jpg"
-                [alt]="appProperties.benefitAltText | language : selectedLanguage.value">
+                [alt]="appProperties.benefitAltText | translate">
         </div>
         <div class="section-info-right">
             <div class="info-container">
                 <div class="info-content">
                     <div class="info-image">
                         <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/gv-1_v2.svg"
-                            [alt]="appProperties.infoContentExperienceAltText | language : selectedLanguage.value">
+                            [alt]="appProperties.infoContentExperienceAltText | translate">
                     </div>
                     <div class="info-text">
                         <p class="info-head">
-                            {{appProperties.infoContentExperience | language : selectedLanguage.value }}</p>
-                        <p>{{appProperties.infoContentExperienceContent | language : selectedLanguage.value }}</p>
+                            {{appProperties.infoContentExperience | translate }}</p>
+                        <p>{{appProperties.infoContentExperienceContent | translate }}</p>
                     </div>
                 </div>
 
                 <div class="info-content">
                     <div class="info-image">
                         <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/gv-2.svg"
-                            [alt]="appProperties.infoContentImpactAltText | language : selectedLanguage.value">
+                            [alt]="appProperties.infoContentImpactAltText | translate">
                     </div>
                     <div class="info-text">
-                        <p class="info-head">{{appProperties.infoContentImpact | language : selectedLanguage.value }}
+                        <p class="info-head">{{appProperties.infoContentImpact | translate }}
                         </p>
-                        <p>{{appProperties.infoContentImpactContent | language : selectedLanguage.value }}</p>
+                        <p>{{appProperties.infoContentImpactContent | translate }}</p>
                     </div>
                 </div>
                 <div class="info-content">
                     <div class="info-image">
                         <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/gv-3.svg"
-                            [alt]="appProperties.infoContentComfortZoneAltText | language : selectedLanguage.value">
+                            [alt]="appProperties.infoContentComfortZoneAltText | translate">
                     </div>
                     <div class="info-text">
                         <p class="info-head">
-                            {{appProperties.infoContentComfortZone | language : selectedLanguage.value }}</p>
-                        <p>{{appProperties.infoContentComfortZoneContent | language : selectedLanguage.value }}</p>
+                            {{appProperties.infoContentComfortZone | translate }}</p>
+                        <p>{{appProperties.infoContentComfortZoneContent | translate }}</p>
                     </div>
                 </div>
             </div>
@@ -60,22 +60,22 @@
     <div class="container space-out-section">
         <div class="flex-parent-2">
             <div class="flex-child-2">
-                <h1 class="headings-text-left">{{appProperties.volunteerHeadText | language : selectedLanguage.value }}
+                <h1 class="headings-text-left">{{appProperties.volunteerHeadText | translate }}
                 </h1>
                 <p class="content-text">
-                    <strong>{{appProperties.volunteerContentSmallText | language : selectedLanguage.value }}</strong>
+                    <strong>{{appProperties.volunteerContentSmallText | translate }}</strong>
                 </p>
                 <p class="content-text mb30">
-                    {{appProperties.volunteerContentBigText1 | language : selectedLanguage.value }}
+                    {{appProperties.volunteerContentBigText1 | translate }}
                     <br><br>
-                    {{appProperties.volunteerContentBigText2 | language : selectedLanguage.value }}
+                    {{appProperties.volunteerContentBigText2 | translate }}
                 </p>
                 <a class="red-underline-btn text-center" target="_blank"
-                    href="#">{{appProperties.volunteerLearnMoreText | language : selectedLanguage.value }}</a>
+                    href="#">{{appProperties.volunteerLearnMoreText | translate }}</a>
             </div>
             <div class="flex-child-2 text-center">
                 <img width="80%" src="https://cdn-expa.aiesec.org/assets/images/aiesec_org/y4gg.gif"
-                    [alt]="appProperties.youth4GlobalGoalsAltText | language : selectedLanguage.value">
+                    [alt]="appProperties.youth4GlobalGoalsAltText | translate">
             </div>
         </div>
     </div>
@@ -89,15 +89,15 @@
                             <source
                                 src="https://aiesec-bk.oss-cn-hangzhou.aliyuncs.com/Images/AIESEC%20Global%20Volunteer%20Introduction%20Video.mp4"
                                 type="video/mp4" />
-                            {{appProperties.videoBrowserNotSupportedText | language : selectedLanguage.value }}
+                            {{appProperties.videoBrowserNotSupportedText | translate }}
                         </video>
                     </div>
                     <div class="flex-child-2">
                         <div class="text-center">
                             <img src="https://cdn-expa.aiesec.org/icons-v2/gv-logo.png"
-                                [alt]="appProperties.volunteerLogoAltText | language : selectedLanguage.value">
+                                [alt]="appProperties.volunteerLogoAltText | translate">
                         </div>
-                        <p class="video-text">{{appProperties.videoContentText | language : selectedLanguage.value }}
+                        <p class="video-text">{{appProperties.videoContentText | translate }}
                         </p>
                     </div>
                 </div>
@@ -107,32 +107,32 @@
     <div class="container space-out-section">
         <div class="flex-parent-2">
             <div class="flex-child-2">
-                <div class="headings-text-left">{{appProperties.offeringHeadText | language : selectedLanguage.value }}
+                <div class="headings-text-left">{{appProperties.offeringHeadText | translate }}
                 </div>
                 <ul class="custom-ul-li">
                     <li class="li-1">
                         <div class="content-text">
-                            {{appProperties.offeringContentText1 | language : selectedLanguage.value }}
+                            {{appProperties.offeringContentText1 | translate }}
                         </div>
                     </li>
                     <li class="li-2">
                         <div class="content-text">
-                            {{appProperties.offeringContentText2 | language : selectedLanguage.value }}</div>
+                            {{appProperties.offeringContentText2 | translate }}</div>
                     </li>
                     <li class="li-3">
                         <div class="content-text">
-                            {{appProperties.offeringContentText3 | language : selectedLanguage.value }}</div>
+                            {{appProperties.offeringContentText3 | translate }}</div>
                     </li>
                     <li class="li-4">
                         <div class="content-text">
-                            {{appProperties.offeringContentText4 | language : selectedLanguage.value }}</div>
+                            {{appProperties.offeringContentText4 | translate }}</div>
                     </li>
                 </ul>
             </div>
             <div class="flex-child-2 text-center">
                 <div class="mission-img">
                     <img src="https://cdn-expa.aiesec.org/assets/images/ldm/LDM_artboard.png"
-                        [alt]="appProperties.offeringAltText | language : selectedLanguage.value">
+                        [alt]="appProperties.offeringAltText | translate">
                 </div>
             </div>
         </div>
@@ -143,44 +143,44 @@
             <div class="flex-parent-3">
                 <div class="flex-child-3 text-center">
                     <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/world-gv-youth.svg"
-                        [alt]="appProperties.countriesCoveredHeadText | language : selectedLanguage.value">
-                    <p>{{appProperties.countriesCoveredContentText | language : selectedLanguage.value }}</p>
-                    <p>{{appProperties.countriesCoveredHeadText | language : selectedLanguage.value }}</p>
+                        [alt]="appProperties.countriesCoveredHeadText | translate">
+                    <p>{{appProperties.countriesCoveredContentText | translate }}</p>
+                    <p>{{appProperties.countriesCoveredHeadText | translate }}</p>
                 </div>
                 <div class="flex-child-3 text-center">
                     <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/members-gv-youth.svg"
-                        [alt]="appProperties.lastYearExperiencesHeadText | language : selectedLanguage.value">
-                    <p>{{appProperties.lastYearExperiencesContentText | language : selectedLanguage.value }}</p>
-                    <p>{{appProperties.lastYearExperiencesHeadText | language : selectedLanguage.value }}</p>
+                        [alt]="appProperties.lastYearExperiencesHeadText | translate">
+                    <p>{{appProperties.lastYearExperiencesContentText | translate }}</p>
+                    <p>{{appProperties.lastYearExperiencesHeadText | translate }}</p>
                 </div>
                 <div class="flex-child-3 text-center">
                     <img src="https://cdn-expa.aiesec.org/assets/images/icons/op_icons/positions-gv-youth.svg"
-                        [alt]="appProperties.positionsOpenedHeadText | language : selectedLanguage.value">
-                    <p>{{appProperties.positionsOpenedContentText | language : selectedLanguage.value }}</p>
-                    <p>{{appProperties.positionsOpenedHeadText | language : selectedLanguage.value }}</p>
+                        [alt]="appProperties.positionsOpenedHeadText | translate">
+                    <p>{{appProperties.positionsOpenedContentText | translate }}</p>
+                    <p>{{appProperties.positionsOpenedHeadText | translate }}</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="space-out-section white-bg">
         <div class="four-box-flow">
-            <h1 class="italics-heading">{{appProperties.serviceHeadText | language : selectedLanguage.value }}</h1>
+            <h1 class="italics-heading">{{appProperties.serviceHeadText | translate }}</h1>
             <div class="flex-parent-4">
                 <div class="flex-child-4 border-top-red">
-                    <h4 class="red-text">1. {{appProperties.serviceHeaderText1 | language : selectedLanguage.value }}</h4>
-                    <p>{{appProperties.serviceContentText1 | language : selectedLanguage.value }}</p>
+                    <h4 class="red-text">1. {{appProperties.serviceHeaderText1 | translate }}</h4>
+                    <p>{{appProperties.serviceContentText1 | translate }}</p>
                 </div>
                 <div class="flex-child-4 border-top-red">
-                    <h4 class="red-text">2. {{appProperties.serviceHeaderText2 | language : selectedLanguage.value }}</h4>
-                    <p>{{appProperties.serviceContentText2 | language : selectedLanguage.value }}</p>
+                    <h4 class="red-text">2. {{appProperties.serviceHeaderText2 | translate }}</h4>
+                    <p>{{appProperties.serviceContentText2 | translate }}</p>
                 </div>
                 <div class="flex-child-4 border-top-red">
-                    <h4 class="red-text">3. {{appProperties.serviceHeaderText3 | language : selectedLanguage.value }}</h4>
-                    <p>{{appProperties.serviceContentText3 | language : selectedLanguage.value }}</p>
+                    <h4 class="red-text">3. {{appProperties.serviceHeaderText3 | translate }}</h4>
+                    <p>{{appProperties.serviceContentText3 | translate }}</p>
                 </div>
                 <div class="flex-child-4 border-top-red">
-                    <h4 class="red-text">4. {{appProperties.serviceHeaderText4 | language : selectedLanguage.value }}</h4>
-                    <p>{{appProperties.serviceContentText4 | language : selectedLanguage.value }}</p>
+                    <h4 class="red-text">4. {{appProperties.serviceHeaderText4 | translate }}</h4>
+                    <p>{{appProperties.serviceContentText4 | translate }}</p>
                 </div>
             </div>
         </div>
@@ -191,62 +191,61 @@
             <div class="section-image-left">
                 <img class="img-responsive"
                     src="https://cdn-expa.aiesec.org/assets/images/aiesec_org/static_images/gv_support_2x.jpg"
-                    [alt]="appProperties.supportAltText | language : selectedLanguage.value">
+                    [alt]="appProperties.supportAltText | translate">
             </div>
             <div class="section-info-right">
                 <div class="info-container">
-                    <h1 class="italics-text">{{appProperties.supportHeadText | language : selectedLanguage.value }}</h1>
+                    <h1 class="italics-text">{{appProperties.supportHeadText | translate }}</h1>
                     <div class="info-content">
                         <div class="info-image">
                             <img src="https://cdn-expa.aiesec.org/icons/logistics.svg"
-                                [alt]="appProperties.supportAltText1 | language : selectedLanguage.value">
+                                [alt]="appProperties.supportAltText1 | translate">
                         </div>
                         <div class="info-text">
                             <p class="info-head">
-                                {{appProperties.supportHeaderText1 | language : selectedLanguage.value }}</p>
-                            <p>{{appProperties.supportContentText1 | language : selectedLanguage.value }}</p>
+                                {{appProperties.supportHeaderText1 | translate }}</p>
+                            <p>{{appProperties.supportContentText1 | translate }}</p>
                         </div>
                     </div>
 
                     <div class="info-content">
                         <div class="info-image">
                             <img src="https://cdn-expa.aiesec.org/icons/description.svg"
-                                [alt]="appProperties.supportAltText2 | language : selectedLanguage.value">
+                                [alt]="appProperties.supportAltText2 | translate">
                         </div>
                         <div class="info-text">
                             <p class="info-head">
-                                {{appProperties.supportHeaderText2 | language : selectedLanguage.value }}</p>
-                            <p>{{appProperties.supportContentText2 | language : selectedLanguage.value }}</p>
+                                {{appProperties.supportHeaderText2 | translate }}</p>
+                            <p>{{appProperties.supportContentText2 | translate }}</p>
                         </div>
                     </div>
 
                     <div class="info-content">
                         <div class="info-image">
                             <img src="https://cdn-expa.aiesec.org/icons/shield.svg"
-                                [alt]="appProperties.supportAltText3 | language : selectedLanguage.value">
+                                [alt]="appProperties.supportAltText3 | translate">
                         </div>
                         <div class="info-text">
                             <p class="info-head">
-                                {{appProperties.supportHeaderText3 | language : selectedLanguage.value }}</p>
-                            <p>{{appProperties.supportContentText3 | language : selectedLanguage.value }}</p>
+                                {{appProperties.supportHeaderText3 | translate }}</p>
+                            <p>{{appProperties.supportContentText3 | translate }}</p>
                         </div>
                     </div>
                     <div class="info-content">
                         <div class="info-image">
                             <img src="https://cdn-expa.aiesec.org/icons/learning.svg"
-                                [alt]="appProperties.supportAltText4 | language : selectedLanguage.value">
+                                [alt]="appProperties.supportAltText4 | translate">
                         </div>
                         <div class="info-text">
                             <p class="info-head">
-                                {{appProperties.supportHeaderText4 | language : selectedLanguage.value }}</p>
-                            <p>{{appProperties.supportContentText4 | language : selectedLanguage.value }}</p>
+                                {{appProperties.supportHeaderText4 | translate }}</p>
+                            <p>{{appProperties.supportContentText4 | translate }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="link-wrapper mtb60">
-                <a class="red-underline-btn"
-                    href="#">{{appProperties.viewOpportuinityText | language : selectedLanguage.value }}</a>
+                <a class="red-underline-btn" href="#">{{appProperties.viewOpportuinityText | translate }}</a>
             </div>
         </div>
     </div>
@@ -258,45 +257,45 @@
     <div class="hidden-md-down">
         <div class="container">
             <div class="desc">
-                <h6>{{appProperties.descHeadText | language : selectedLanguage.value }}</h6>
-                <p>{{appProperties.descContentText | language : selectedLanguage.value }}</p>
+                <h6>{{appProperties.descHeadText | translate }}</h6>
+                <p>{{appProperties.descContentText | translate }}</p>
             </div>
 
             <div class="about">
-                <h6> {{appProperties.aboutHeadText | language : selectedLanguage.value }} </h6>
+                <h6> {{appProperties.aboutHeadText | translate }} </h6>
                 <a *ngFor="let about of appProperties.aboutAnchorTexts" href="#">
-                    {{about | language : selectedLanguage.value }} </a>
+                    {{about | translate }} </a>
             </div>
 
             <div class="contact">
-                <h6> {{appProperties.youthHeadText | language : selectedLanguage.value }} </h6>
+                <h6> {{appProperties.youthHeadText | translate }} </h6>
                 <a *ngFor="let youth of appProperties.youthAnchorTexts" href="#">
-                    {{youth | language : selectedLanguage.value }} </a>
+                    {{youth | translate }} </a>
             </div>
 
             <div class="partners">
-                <h6> {{appProperties.organizationHeadText | language : selectedLanguage.value }} </h6>
+                <h6> {{appProperties.organizationHeadText | translate }} </h6>
                 <a *ngFor="let org of appProperties.organizationAnchorTexts" href="#">
-                    {{org | language : selectedLanguage.value }} </a>
+                    {{org | translate }} </a>
             </div>
 
             <div class="membership">
-                <h6> {{appProperties.membershipHeadText | language : selectedLanguage.value }} </h6>
+                <h6> {{appProperties.membershipHeadText | translate }} </h6>
                 <a *ngFor="let mem of appProperties.membershipAnchorTexts" href="#">
-                    {{mem | language : selectedLanguage.value }} </a>
+                    {{mem | translate }} </a>
             </div>
         </div>
 
         <div class="container">
             <span>
-                {{appProperties.registeredName | language : selectedLanguage.value }}
+                {{appProperties.registeredName | translate }}
             </span>
             <span>
-                <a href="#" target="_blank"> {{appProperties.termsAndPrivacyText | language : selectedLanguage.value }}
+                <a href="#" target="_blank"> {{appProperties.termsAndPrivacyText | translate }}
                 </a>
             </span>
             <span>
-                <a href="#" target="_blank"> {{appProperties.cookiesPolicyText | language : selectedLanguage.value }}
+                <a href="#" target="_blank"> {{appProperties.cookiesPolicyText | translate }}
                 </a>
             </span>
             <span></span>
@@ -311,8 +310,8 @@
                 <div class="select-box-custom">
                     <div class="custom-footer-select dropup">
                         <select class="language-selection" [formControl]="selectedLanguage">
-                            <option *ngFor="let language of languageOptions" [value]="language.languageCode">
-                                {{language.language | language : selectedLanguage.value }}</option>
+                            <option *ngFor="let lan of languageOptions" [value]="lan.languageCode">
+                                {{lan.language | translate : lan.languageCode }}</option>
                         </select>
                     </div>
                 </div>

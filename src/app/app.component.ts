@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+import { Subscription } from 'rxjs';
+
 import { AppProperties } from './app-properties.model';
-import { LanguageTranslationProviderService } from './language-translation-provider.service';
+import { TranslationService } from './translations/translation.service';
 
 @Component({
     selector: 'app-root',
@@ -14,36 +16,31 @@ import { LanguageTranslationProviderService } from './language-translation-provi
         AppProperties
     ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
     public languageOptions: Array<{ language: string; languageCode: string }>;
     public selectedLanguage: FormControl;
+    public subscription: Subscription;
 
-    constructor(
-        public appProperties: AppProperties,
-        private languageTranslationProviderService: LanguageTranslationProviderService
-    ) {}
+    constructor(public appProperties: AppProperties, private translationService: TranslationService) {}
 
     ngOnInit() {
-        this.languageOptions = this.languageTranslationProviderService.getLanguageOptions();
-        this.selectedLanguage = new FormControl('en');
+        this.languageOptions = this.translationService.getLanguageOptions();
 
-        this.languageTranslationProviderService.recordsLoaded.subscribe((loaded) => {
+        this.selectedLanguage = new FormControl('en');
+        this.translationService.useLanguage('en');
+
+        this.selectedLanguage.valueChanges.subscribe((language: string) => {
+            this.translationService.useLanguage(language);
+        });
+
+        this.subscription = this.translationService.recordsLoaded.subscribe((loaded) => {
             if (loaded) {
-                this.getBrowserLanguage();
+                this.selectedLanguage.setValue(this.translationService.getBrowserLanguage());
             }
         });
     }
 
-    private getBrowserLanguage() {
-        let browserLanguage = navigator.language.slice(0, 2) || 'en';
-        if (
-            !this.languageOptions.find((language) => {
-                return language.languageCode === browserLanguage;
-            })
-        ) {
-            browserLanguage = 'en';
-        }
-
-        this.selectedLanguage.setValue(browserLanguage);
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
     }
 }
