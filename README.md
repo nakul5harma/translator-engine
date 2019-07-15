@@ -7,7 +7,6 @@ This applcaition was created for the purpose of learning. It provides user with 
 2. Go to project directory
 3. `npm install` to install all the dependencies.
 4. `npm start` - for serving the application in development mode at http://localhost:4200
-5. `npm run deploy:ghpages` - for deploying the application on Github-Pages. You must have angular-cli-ghpages installed globally for deploying this application on Github-Pages by using the above command (use `npm install -g angular-cli-ghpages` to install).
 
 ### Application is deployed to Github-Pages and Amazon S3 bucket. Please use below links to open the application -
 1. GitHub-Pages - https://nshadyy.github.io/translator-engine/
